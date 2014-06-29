@@ -1,0 +1,30 @@
+{
+	"name": "angular-wise-form",
+	"version": "1.0.0",
+	"authors": [
+		"Piotr Marat <piotrek.marat@gmail.com>, Mateusz Bil <rt@rubytree.me>"
+	],
+	"description": "Neat AngularJS form directive",
+	"keywords": [
+		"angular",
+		"form",
+		"angular-wise-form",
+		"wise-form"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"angular":"~1.2.0",
+		"angular-animate":"~1.2.0",
+		"angular-sanitize":"~1.2.0",
+		"angular-touch":"~1.2.0"
+	},
+	"devDependencies": {
+	}
+}
