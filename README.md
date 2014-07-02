@@ -3,7 +3,7 @@
 [TODO - brief summary]
 
 ## Demo
-http://314technologies.github.io/angular-wise-form/
+http://314technologies.github.io/wise-form/
 
 ## Dependencies
 - required:
@@ -16,19 +16,17 @@ See `bower.json` and `index.html` in the `gh-pages` branch for a full list / mor
 ## Install
 1. download the files
 	1. Bower
-		1. add `"angular-wise-form": "latest"` to your `bower.json` file then run `bower install` OR run `bower install angular-wise-form`
+		1. add `"wise-form": "latest"` to your `bower.json` file then run `bower install` OR run `bower install wise-form`
 2. include the files in your app
 	1. `wise-form.min.js`
 	2. `wise-form.less` OR `wise-form.min.css` OR `wise-form.css`
-3. include the module in angular (i.e. in `app.js`) - `314technologies.angular-wise-form`
+3. include the module in angular (i.e. in `app.js`) - `314technologies.wise-form`
 
 See the `gh-pages` branch, files `bower.json` and `index.html` for a full example.
 
-
 ## Documentation
 See the `wise-form.js` file top comments for usage examples and documentation
-https://github.com/314technologies/angular-wise-form/blob/master/wise-form.js
-
+https://github.com/314technologies/wise-form/blob/master/wise-form.js
 
 ## Development
 
@@ -48,4 +46,4 @@ https://github.com/314technologies/angular-wise-form/blob/master/wise-form.js
 	3. `git checkout gh-pages`
 	4. `git push origin gh-pages`
 5. (optional) register bower component
-	1. `bower register angular-wise-form [git repo url]`
+	1. `bower register wise-form [git repo url]`
