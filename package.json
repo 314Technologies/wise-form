@@ -2,7 +2,13 @@
   "name": "protractor-tests",
   "version": "0.0.1",
   "devDependencies": {
-    "protractor": "0.24.2"
+    "protractor": "^1.0.0-rc1",
+    "gulp": "^3.8.5",
+    "gulp-coffee": "^2.0.1",
+    "gulp-coffeelint": "^0.3.3",
+    "gulp-watch": "^0.6.8",
+    "gulp-protractor": "0.0.11",
+    "gulp-concat": "^2.2.0"
   },
   "scripts": {
     "install": "./node_modules/protractor/bin/webdriver-manager update"
