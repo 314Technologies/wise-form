@@ -1,6 +1,7 @@
 exports.config = {
   // The address of a running selenium server.
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  //seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.42.2.jar',
+  seleniumAddress: 'http://localhost:4444/',
 
   // Spec patterns are relative to the location of this config.
   specs: [
@@ -8,17 +9,20 @@ exports.config = {
   ],
   multiCapabilities: [
   /* Uncomment these to run tests in other browsers:
-          { 'browserName': 'chrome' },
           { 'browserName': 'firefox' },
           { 'browserName': 'safari' },
+          { 'browserName': 'chrome' },
   */
-          {
-              'browserName': 'phantomjs',
-              'phantomjs.binary.path': './node_modules/phantomjs/bin/phantomjs',
-              'phantomjs.cli.args': ['--debug=false', '--webdriver-logfile=/tmp/webdriver.log', '--webdriver-loglevel=INFO']
+          { 'browserName': 'phantomjs',
+             'phantomjs.binary.path': '/usr/local/bin/phantomjs',
+          }
+          //{
+              //'browserName': 'phantomjs'
+              //'phantomjs.binary.path': '/usr/local/bin/phantomjs',
+              //'phantomjs.cli.args': ['--debug=true', '--webdriver-logfile=/tmp/webdriver.log', '--webdriver-loglevel=INFO']
   //            'phantomjs.cli.args': ['--debug=true', '--webdriver-logfile=webdriver.log', '--webdriver-loglevel=DEBUG']     // alternative, with full debugging on
               // (loglevels supported: 'ERROR', 'WARN', 'INFO', 'DEBUG') (default 'INFO')
-          }
+          //}
       ],
 
   // A base URL for your application under test. Calls to protractor.get()
@@ -30,6 +34,6 @@ exports.config = {
     isVerbose: false,
     showColors: true,
     includeStackTrace: true,
-    defaultTimeoutInterval: 10000
+    defaultTimeoutInterval: 30000
   }
 };

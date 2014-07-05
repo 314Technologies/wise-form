@@ -5,7 +5,13 @@ var gulp = require('gulp'),
     coffee = require('gulp-coffee'),
     coffeelint = require('gulp-coffeelint'),
     concat = require('gulp-concat'),
-    watch = require('gulp-watch');
+    watch = require('gulp-watch'),
+    webdriver_standalone = require("gulp-protractor").webdriver_standalone,
+    connect = require('gulp-connect');
+
+gulp.task('connect', function() {
+   connect.server();
+});
 
 gulp.task('compile-coffee', function() {
   gulp.src('./src/*.coffee')
@@ -22,13 +28,19 @@ gulp.task('compile-coffee', function() {
     .pipe(gulp.dest('./spec/'));
 });
 
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 gulp.task('run-spec', function () {
   gulp.start('compile-coffee');
   gulp.src('./spec/spec.js')
     .pipe(protractor({
             configFile: "./spec/protractor.conf.js",
             args: ['--baseUrl', 'http://127.0.0.1:8000']
-        }));
+        }))
+    .on('error', handleError);
 });
 
 gulp.task('watch', function() {

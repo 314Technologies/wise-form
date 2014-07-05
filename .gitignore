@@ -13,6 +13,7 @@ pids
 logs
 results
 tags
+spec/spec.js
 
 node_modules
 
