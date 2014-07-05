@@ -9,8 +9,12 @@ var gulp = require('gulp'),
     webdriver_standalone = require("gulp-protractor").webdriver_standalone,
     connect = require('gulp-connect');
 
-gulp.task('connect', function() {
-   connect.server();
+gulp.task('test-server', function () {
+    connect.server({
+        root: 'spec',
+        port: 8000,
+        livereload: true
+      });
 });
 
 gulp.task('compile-coffee', function() {
